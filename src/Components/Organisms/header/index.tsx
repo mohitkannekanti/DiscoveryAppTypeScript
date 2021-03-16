@@ -6,7 +6,7 @@ import './styles.css'
 
 const headerData = {
     search: {
-        placeholder: "search"
+        placeholder: "Search for Shows"
     },
     logoData: {
         logoSrc: ['hamburgerIcon.svg', 'logo.png'],

@@ -7,7 +7,7 @@ interface navProps {
 }
 
 const NavLinks: React.FC<navProps> = ({ content }) => {
-    console.log(content, "con")
+    // console.log(content, "con")
 
     return (
         <div className="nav-links">
