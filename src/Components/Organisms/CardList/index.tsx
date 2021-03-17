@@ -1,19 +1,22 @@
 import React from 'react'
-import Card from '../../Molecules/Card'
+import Card from '../../Molecules/Card';
+import './styles.css'
 
-interface cardProps {
-    content: string[];
+
+
+const cardsContent = {
+    locationList: ['Adventure.jpg', 'Animals.jpg', 'Nature.jpg', 'Auto.jpg', 'Food.jpg', 'lifeStyle.jpg'],
+    textList: ['Adventure', 'Animals', 'Nature', 'Auto', 'Food', 'Life Style']
 }
-
-
-const CardList: React.FC<cardProps> = ({ content }) => {
-    console.log(content, "cardsList")
+const CardList = () => {
     return (
-        <div className="card-box">
-            {content && content.map((cData, index) => {
-                <Card cardImg={cData} cardContent={cData} />
+        <div className='cards'>
+            {cardsContent.locationList.map((location, index) => {
+                return (
+                    <Card cardImgSrc={location} cardImgWidth="240px" cardContent={cardsContent.textList[index]} key={index} />
+                )
             })}
         </div>
-    )
+    );
 }
 export default CardList

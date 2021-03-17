@@ -1,5 +1,6 @@
 import React from 'react';
 import CardList from '../Organisms/CardList';
+import CarouselSlider from '../Organisms/Carousel';
 import Header from '../Organisms/header';
 
 const templateData = {
@@ -13,7 +14,8 @@ const Template: React.FC = () => {
     return (
         <div className="template">
             <Header />
-            {/* <CardList content={templateData.cardDataList} /> */}
+            <CardList />
+            <CarouselSlider />
         </div>
     )
 }
